@@ -5,9 +5,9 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+            <div className="navbar-brand">
             <img src={logo} alt="" style={{ height: "50px" }} />
-          </a>
+            </div>
           <button
             className="navbar-toggler"
             type="button"
