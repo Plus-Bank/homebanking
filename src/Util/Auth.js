@@ -1,7 +1,7 @@
-import AppHomebanking from "../AppHomebanking";
+import AppHomebanking from "../Components/Pages/AppHomebanking";
 import Login from "../PagesBanco/Login";
 import { useState } from "react";
-import { getToken } from "../../Helpers/auth-helpers";
+import { getToken } from "../Helpers/auth-helpers";
 
 function Auth() {
   const [usuario, setUsuario] = useState(null);

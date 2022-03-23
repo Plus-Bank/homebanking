@@ -1,7 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, Navbar, Footer, } from "./RoutesComponent";
-
-import Error404 from "../Components/Pages/PagesBanco/Error404";
+import { Home, Navbar, Footer, SingIn,  } from "./RoutesComponent";
 
 const Rutas = () => {
   return (
@@ -11,7 +9,7 @@ const Rutas = () => {
         <div className="wrap">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="*" element={<Error404 />} />
+            <Route path="/singin" element={<SingIn />} />
           </Routes>
         </div>
         <Footer />

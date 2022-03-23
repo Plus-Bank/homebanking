@@ -10,15 +10,11 @@ import Cuentas from "../Components/Pages/PagesHomebanking/Cuentas/Cuentas";
 import Movimientos from "../Components/Pages/PagesHomebanking/Movimientos";
 import EnviarDinero from "../Components/Pages/PagesHomebanking/EnviarDinero";
 import Inicio from "../Components/Pages/PagesHomebanking/Inicio";
-import { getToken } from "../Components/Helpers/auth-helpers";
-import Login from "../Components/Pages/Login";
 
 const AppRouter = () => {
-  console.log(getToken());
   return (
     <>
       <Routes>
-        {getToken() ? (
           <Route path="apphomebanking" element={<AppHomebanking />}>
             <Route index element={<Inicio />} />
             <Route path="actividad" element={<Actividad />} />
@@ -30,10 +26,6 @@ const AppRouter = () => {
             <Route path="movimientos" element={<Movimientos />} />
             <Route path="enviar_dinero" element={<EnviarDinero />} />
           </Route>
-        ) : (
-          <Route path="login" element={<Login />} />
-        )}
-
         <Route path="/*" element={<Rutas />} />
       </Routes>
     </>
